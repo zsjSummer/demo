@@ -1,6 +1,6 @@
 ## README
 
-A desktop application to help programmer who's english is poor to quick translate.
+A desktop application to help programmer who's English is poor like me to quick translate.
 
 ### Install
 
@@ -14,7 +14,7 @@ cd demo
 npm install --save-dev electron
 ```
 
-If the speed is to low,you can try this method below.
+If the speed is too slow, you can try the following methods.
 
 ```sh
 # config the mirrors of taobao to install electron.
@@ -22,7 +22,7 @@ npm config set electron_mirror https://npm.taobao.org/mirrors/electron/
 npm install electron --save-dev --registry=https://registry.npm.taobao.org
 ```
 
-Start application.You should make sure all dependencies has alerady installed.
+Start application. You should make sure all dependencies have installed.
 
 ```sh
 npm start
@@ -47,7 +47,7 @@ npm start
 15. - [ ] 语言选择切换，自定义翻译 source language 和 target language
 16. - [ ] ······
 
-### Translate API
+### Translate APIs
 
 #### Google open API
 
@@ -87,7 +87,7 @@ npm start
 
 1. http://fanyi.youdao.com/translate?&doctype=json&type=AUTO&i=计算
 
->style(language auto check)：
+>style(language auto check):
 >
 >```json
 >{
