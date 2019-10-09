@@ -26,6 +26,3 @@ node_modules/*
 /nbdist/
 /.nb-gradle/
 /logs
-/yusp-msm-elsearch/target
-/yusp-msm-elsearch/.apt_generated
-/yusp-msm-elsearch/.settings
