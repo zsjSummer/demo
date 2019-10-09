@@ -85,7 +85,7 @@ window.onload = function () {
                 clearTimeout(this.timeout);
                 this.timeout = setTimeout(() => {
                     this.search(curVal);
-                }, 300);
+                }, 1000);
             }
         }
     })

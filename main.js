@@ -45,11 +45,11 @@ app.on('ready', () => {
         webPreferences: {
           nodeIntegration: true
         },
-        frame: false,
-        resizable: true,
-        opacity: 1.0, // 窗口透明
-        transparent: true,
-        backgroundColor: '#00FFFFFF'
+        frame: false,// 无边框窗口
+        resizable: true, // 可以改变大小
+        opacity: 1.0, // 窗口透明 0.0-完全透明，1.0-不透明
+        transparent: true, // 设置了这个为 true 背景色则可以用 alhpa 值
+        backgroundColor: '#00FFFFFF' // 背景色，前两位 00 是 alpha 值
       })
       // searchWin.webContents.openDevTools()
       searchWin.loadFile("./page/search/search.html");
