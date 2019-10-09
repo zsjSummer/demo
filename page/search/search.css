@@ -1,0 +1,25 @@
+#searchDiv{
+    width: 100%;
+    height: 100%;
+}
+#searchText{
+    text-indent: 10px;
+    font-size: 16px;
+    width: 100%;
+    outline: none;
+    height: 35px;
+    border: 0;
+}
+#resultArea{
+    border-top: 1px solid #6d6969;
+    width: 100%;
+    background-color: #ffffff;
+}
+#resultArea ul{
+    font-size: 18px;
+    width: 100%;
+    float:left;
+    margin: 0px;
+    padding: 0px;
+    background-color: #ffffff;
+}
