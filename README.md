@@ -30,26 +30,26 @@
 >
 >```json
 >{
->    "sentences": [
->        {
->            "trans": "你好吗",
->            "orig": "how are you",
->            "backend": 1
+>        "sentences": [
+>            {
+>                "trans": "你好吗",
+>                "orig": "how are you",
+>                "backend": 1
+>            }
+>        ],
+>        "src": "en",
+>        "confidence": 1,
+>        "ld_result": {
+>            "srclangs": [
+>                "en"
+>            ],
+>            "srclangs_confidences": [
+>                1
+>            ],
+>            "extended_srclangs": [
+>                "en"
+>            ]
 >        }
->    ],
->    "src": "en",
->    "confidence": 1,
->    "ld_result": {
->        "srclangs": [
->            "en"
->        ],
->        "srclangs_confidences": [
->            1
->        ],
->        "extended_srclangs": [
->            "en"
->        ]
->    }
 >}
 >```
 >
@@ -62,17 +62,17 @@
 >
 >```json
 >{
->"type": "ZH_CN2EN",
->"errorCode": 0,
->"elapsedTime": 1,
->"translateResult": [
->   [
->       {
->           "src": "计算",
->           "tgt": "To calculate"
->       }
->   ]
->]
+>    "type": "ZH_CN2EN",
+>    "errorCode": 0,
+>    "elapsedTime": 1,
+>    "translateResult": [
+>           [
+>               {
+>                   "src": "计算",
+>                   "tgt": "To calculate"
+>               }
+>           ]
+>    ]
 >}
 >```
 >
