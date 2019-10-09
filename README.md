@@ -1,6 +1,33 @@
 ## README
 
+A desktop application to help programmer who's english is poor to quick translate.
+
+### Install
+
+```sh
+# clone 工程
+git clone https://github.com/zsjSummer/demo.git
+# 安装 electron
+cd demo
+npm install --save-dev electron
+```
+
+如果上面的 install 速度太慢，用以下的方法
+
+```sh
+# 设置淘宝的镜像来安装
+npm config set electron_mirror https://npm.taobao.org/mirrors/electron/
+npm install electron --save-dev --registry=https://registry.npm.taobao.org
+```
+
+启动
+
+```sh
+npm start
+```
+
 ### TODO List
+
 1. - [ ] 完成全局快捷键弹出框
 2. - [ ] 自动 focus 到弹出框的输入框
 3. - [ ] 监听输入框的 change 自动翻译（需要延时，需要解决请求异步数据不一致问题）
