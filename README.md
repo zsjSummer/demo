@@ -4,23 +4,25 @@ A desktop application to help programmer who's english is poor to quick translat
 
 ### Install
 
+Download this project.
+
 ```sh
-# clone 工程
+# clone project
 git clone https://github.com/zsjSummer/demo.git
-# 安装 electron
+# install electron
 cd demo
 npm install --save-dev electron
 ```
 
-如果上面的 install 速度太慢，用以下的方法
+If the speed is to low,you can try this method below.
 
 ```sh
-# 设置淘宝的镜像来安装
+# config the mirrors of taobao to install electron.
 npm config set electron_mirror https://npm.taobao.org/mirrors/electron/
 npm install electron --save-dev --registry=https://registry.npm.taobao.org
 ```
 
-启动
+Start application.You should make sure all dependencies has alerady installed.
 
 ```sh
 npm start
@@ -45,15 +47,15 @@ npm start
 15. - [ ] 语言选择切换，自定义翻译 source language 和 target language
 16. - [ ] ······
 
-### 翻译接口
+### Translate API
 
-#### 谷歌翻译
+#### Google open API
 
-1. 英文转中文: http://translate.google.cn/translate_a/single?client=gtx&dt=t&dj=1&ie=UTF-8&sl=auto&tl=zh&q=you
+1. en to zh_cn: http://translate.google.cn/translate_a/single?client=gtx&dt=t&dj=1&ie=UTF-8&sl=en&tl=zh&q=you
 
-2. 中文转英文: http://translate.google.cn/translate_a/single?client=gtx&dt=t&dj=1&ie=UTF-8&sl=auto&tl=en&q=你 
+2. zh_cn to en: http://translate.google.cn/translate_a/single?client=gtx&dt=t&dj=1&ie=UTF-8&sl=zh&tl=en&q=你 
 
->格式：
+>Style
 >
 >```json
 >{
@@ -81,11 +83,11 @@ npm start
 >```
 >
 
-#### 有道翻译
+#### YouDao open API
 
 1. http://fanyi.youdao.com/translate?&doctype=json&type=AUTO&i=计算
 
->格式(语言自动检测)：
+>style(language auto check)：
 >
 >```json
 >{
