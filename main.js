@@ -51,7 +51,7 @@ app.on('ready', () => {
         transparent: true,
         backgroundColor: '#00FFFFFF'
       })
-      searchWin.webContents.openDevTools()
+      // searchWin.webContents.openDevTools()
       searchWin.loadFile("./page/search/search.html");
       searchWin.on('closed', () => {
         // 取消引用 window 对象，如果你的应用支持多窗口的话，
