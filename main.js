@@ -3,7 +3,8 @@ const { app, BrowserWindow, dialog, globalShortcut } = require('electron')
 // 垃圾回收的时候，window对象将会自动的关闭
 let win
 
-function createWindow() {
+// 主窗口
+function createMainWindow() {
   // 创建浏览器窗口。
   win = new BrowserWindow({
     width: 800,
@@ -14,7 +15,7 @@ function createWindow() {
   })
 
   // 加载index.html文件
-  win.loadFile('index.html')
+  win.loadFile('./page/index/index.html')
 
   // 打开开发者工具
   win.webContents.openDevTools()
@@ -28,20 +29,16 @@ function createWindow() {
   })
 }
 
-// Electron 会在初始化后并准备
-// 创建浏览器窗口时，调用这个函数。
-// 部分 API 在 ready 事件触发后才能使用。
-// app.on('ready', createWindow)
-app.on('ready', () => {
-  // createWindow();
+// 搜索窗口
+function createSearchWindow() {
   // 搜索框框
   var searchWin;
   // 注册全局快捷键---打开搜索框框
-  const openSearch = globalShortcut.register('CommandOrControl+X', () => {
+  const openSearch = globalShortcut.register('CommandOrControl+Alt+X', () => {
     if (searchWin == null) {
       searchWin = new BrowserWindow({
         width: 600,
-        height: 500,
+        height: 350,
         webPreferences: {
           nodeIntegration: true
         },
@@ -64,18 +61,27 @@ app.on('ready', () => {
       console.log("already created one window!");
     }
     //注册全局快捷键---关闭搜索框框
-    const closeSearch = globalShortcut.register('CommandOrControl+Z', () => {
+    const closeSearch = globalShortcut.register('CommandOrControl+Alt+Z', () => {
       if (searchWin != null) {
         searchWin.close();
       }
     })
   })
+}
+
+// Electron 会在初始化后并准备
+// 创建浏览器窗口时，调用这个函数。
+// 部分 API 在 ready 事件触发后才能使用。
+// app.on('ready', createWindow)
+app.on('ready', () => {
+  createMainWindow();
+  createSearchWindow();
 })
 
 app.on('will-quit', () => {
   // 注销快捷键
-  globalShortcut.unregister('CommandOrControl+X')
-  globalShortcut.unregister('CommandOrControl+Z')
+  globalShortcut.unregister('CommandOrControl+Alt+X')
+  globalShortcut.unregister('CommandOrControl+Alt+Z')
   // 注销所有快捷键
   globalShortcut.unregisterAll()
 })
@@ -93,7 +99,7 @@ app.on('activate', () => {
   // 在macOS上，当单击dock图标并且没有其他窗口打开时，
   // 通常在应用程序中重新创建一个窗口。
   if (win === null) {
-    createWindow()
+    createMainWindow()
   }
 })
 

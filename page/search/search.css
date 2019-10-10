@@ -1,25 +1,36 @@
-#searchDiv{
+#searchDiv {
     width: 100%;
     height: 100%;
 }
-#searchText{
+
+#searchText {
     text-indent: 10px;
-    font-size: 16px;
+    font-size: 14px;
     width: 100%;
     outline: none;
-    height: 35px;
+    height: 30px;
     border: 0;
+    background-color: #333131;
 }
-#resultArea{
-    border-top: 1px solid #6d6969;
+
+#resultArea {
+    border-top: 1px solid #777272;
     width: 100%;
-    background-color: #ffffff;
+    color: #e7dbdb;
+    background-color: #333131;
 }
-#resultArea ul{
-    font-size: 18px;
+
+#resultArea ul {
+    font-size: 14px;
     width: 100%;
-    float:left;
     margin: 0px;
     padding: 0px;
-    background-color: #ffffff;
+    color: #e7dbdb;
+    background-color: #333131;
+}
+
+#resultArea ul li{
+    text-indent: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
